@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 //import Pizza from "./Pizza.jsx";
 import Order from "./Order.jsx";
+import PizzaOfTheDay from "./PizzaOfTheDay.jsx";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
         description="A fresh mix of bell peppers, mushrooms, olives, tomatoes, onions, and sweetcorn."
         image={"/public/pizzas/ckn_pesto.webp"}
       /> */}
+      <PizzaOfTheDay />
     </div>
   );
 };
