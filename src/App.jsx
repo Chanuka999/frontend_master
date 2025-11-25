@@ -7,7 +7,7 @@ import PizzaOfTheDay from "./PizzaOfTheDay.jsx";
 const App = () => {
   return (
     <div>
-      <h1>Pizza hut </h1>
+      <h1 className="logo">Pizza hut </h1>
       <Order />
       {/* <Pizza
         name="Pepperoni Feast"
