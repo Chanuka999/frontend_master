@@ -1,32 +1,33 @@
-import React from "react";
-import { usePizzaOfTheDay } from "./usePizzaOfTheDay.jsx";
+import { usePizzaOfTheDay } from "./usePizzaOfTheDay";
 
+// feel free to change en-US / USD to your locale
 const intl = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
 });
 
 const PizzaOfTheDay = () => {
-  const PizzaOfTheDay = usePizzaOfTheDay();
+  const pizzaOfTheDay = usePizzaOfTheDay();
 
-  if (!PizzaOfTheDay) {
-    return <div>Loading....</div>;
+  if (!pizzaOfTheDay) {
+    return <div>Loading...</div>;
   }
+
   return (
-    <div className="pizza-of-the-day-info">
+    <div className="pizza-of-the-day">
       <h2>Pizza of the Day</h2>
       <div>
         <div className="pizza-of-the-day-info">
-          <h3>{PizzaOfTheDay.name}</h3>
-          <p>{PizzaOfTheDay.description}</p>
+          <h3>{pizzaOfTheDay.name}</h3>
+          <p>{pizzaOfTheDay.description}</p>
           <p className="pizza-of-the-day-price">
-            From:{intl.format(PizzaOfTheDay.sizes.S)}
+            From: <span>{intl.format(pizzaOfTheDay.sizes.S)}</span>
           </p>
         </div>
         <img
           className="pizza-of-the-day-image"
-          src={PizzaOfTheDay.image}
-          alt={PizzaOfTheDay.name}
+          src={pizzaOfTheDay.image}
+          alt={pizzaOfTheDay.name}
         />
       </div>
     </div>

@@ -1,12 +1,3 @@
-// const pizza = (props) => {
-//   return React.createElement("div", {}, [
-//     React.createElement("h1", {}, props.name),
-//     React.createElement("p", {}, props.description),
-//   ]);
-// };
-
-//import React from "react";
-
 const Pizza = (props) => {
   return (
     <div className="pizza">
